@@ -1,34 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Beta Tester</title>
-</head>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
 
-<body> 
-  <div class="beta-request">
-    <div class="header">
-      <h3 class="title">Beta tester form</h3>
-      <span class="subtitle">Leave your info and become a beta tester!</span>
-    </div>
-    <div class="body">
-      <form class="form">
-        <div class="group general-info">
-          <input class="field name" type="text" placeholder="Name">
-          <input class="field surname" type="text" placeholder="Surname">
-        </div>
-        <div class="group contact-info">
-          <input class="field email" type="text" placeholder="Email">
-          <input class="field phone" type="text" placeholder="Phone">
-        </div>
-        <input class="button" type="submit" value="Submit">
-      </form>
-    </div>
-  </div>
-</body>
-</html>
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: lightgrey;
+}
+
+.beta-request {
+    max-width: 1024px;
+    width: 100%;
+    max-height: auto;
+    height: auto;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px;
+}
+
+.beta-request .header {
+    background-color: #44bfa3;
+    color: #ffffff;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+.beta-request .title {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 5px 0;
+    
+}
+
+.beta-request .subtitle {
+    text-transform: lowercase;
+    padding-bottom: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    
+}
+
+.body .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input::placeholder {
+    padding-left: 5px;
+    font-weight: 200;
+}
+
+.form input {
+    border-radius: 3px;
+}
+
+.general-info input, .contact-info input {
+    height: 40px;
+    width: 100%;
+    margin: 10px 5px 0 0px ;
+    border: 1px solid #cccccc;
+    background-color:#f5f6f7 ;
+    color: #999999;        
+}   
+
+.button {
+    padding: 15px;
+    background-color: #3498db;
+    color: #ffffff;
+    border-radius: 5px; 
+    border: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.button input:hover {
+    background-color: #3498db;
+}
 
 
+
+
+
+@media only screen and (max-width: 1024px) {
+.beta-request {
+    display: inline-block;        
+    max-height: auto;
+    max-width: 80%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+    
+}
